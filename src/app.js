@@ -33,9 +33,9 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'This is a help message.',
         title: 'Help',
-        name: 'David Meadows'
+        name: 'David Meadows',
+        helpText: 'This is a help message.',
     })
 });
 
@@ -43,6 +43,22 @@ app.get('/weather', (req, res) => {
     res.send({
         location: "Jacksonville",
         forecast: "It's HOT!",
+    });
+});
+
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'David Meadows',
+        errorMessage: 'Help article not found.',
+    });
+});
+
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'David Meadows',
+        errorMessage: 'Page not found.',
     });
 });
 
