@@ -49,9 +49,9 @@ app.get('/weather', (req, res) => {
         });
     }
 
-    geocode(address, (error, {latitude, longitude, location}) => {
+    geocode(address, (error, {latitude, longitude, location} = {}) => {
         if (error) {
-            return send.res({error});
+            return res.send({error});
         }
 
         forecast(latitude, longitude, (error, forecastData) => {
@@ -66,12 +66,6 @@ app.get('/weather', (req, res) => {
             })
         })
     })
-
-    // res.send({
-    //     location: "Jacksonville",
-    //     forecast: "It's HOT!",
-    //     address: req.query.address,
-    // });
 });
 
 app.get('/products', (req, res) => {
