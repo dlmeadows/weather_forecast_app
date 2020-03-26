@@ -45,7 +45,7 @@ app.get('/weather', (req, res) => {
     const address = req.query.address;
     if (!address) {
         return res.send({
-            error: 'You did not specify an address'
+            error: `You must provide an address!.`
         });
     }
 
