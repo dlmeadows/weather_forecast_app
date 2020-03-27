@@ -9,7 +9,7 @@ const darkSkyKey = config.darkSkyKey;
  * @param callback
  */
 const forecast = (latitude, longitude, callback) => {
-    const url = `https://api.darksky.net/forecast/${darkSkyKey}/${latitude},${longitude}`;
+    const url = `https://api.darksky.net/forecast/873aa2d9043f3ff7b1ffab06d6580683/${latitude},${longitude}`;
     request({url, json: true}, (error, {body}) => {
         if (error) {
             callback(`Unable to connect to weather service!`, undefined);
