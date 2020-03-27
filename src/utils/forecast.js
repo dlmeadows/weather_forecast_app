@@ -1,6 +1,4 @@
 const request = require('request');
-const config = require('../config/config');
-const darkSkyKey = config.darkSkyKey;
 
 /**
  * Takes in the latitude and longitude as arguments and returns the forecast for that address

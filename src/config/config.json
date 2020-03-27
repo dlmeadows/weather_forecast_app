@@ -1,6 +1,0 @@
-{
-  "darkSkyKey": "873aa2d9043f3ff7b1ffab06d6580683",
-  "geocodeToken": "pk.eyJ1IjoiZG1lYWRvd3M4NSIsImEiOiJjazg1MG1tczMwMXpkM2lwMWU3bGd4dm5lIn0.I_ekFwxBOwjThJMZTM5dDQ&limit=1",
-  "url": "https://api.darksky.net/forecast/873aa2d9043f3ff7b1ffab06d6580683/37.8267,-122.4233",
-  "geoUrl": "https://api.mapbox.com/geocoding/v5/mapbox.places/philadephia.json?access_token=pk.eyJ1IjoiZG1lYWRvd3M4NSIsImEiOiJjazg1MG1tczMwMXpkM2lwMWU3bGd4dm5lIn0.I_ekFwxBOwjThJMZTM5dDQ&limit=1"
-}
