@@ -1,6 +1,4 @@
 const request = require('request');
-const config = require('../config/config');
-const geocodeToken = config.geocodeToken;
 
 /**
  * Takes in an address as an argument, and returns the latitude and longitude
