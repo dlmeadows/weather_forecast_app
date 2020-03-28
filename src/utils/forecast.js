@@ -1,6 +1,10 @@
 const request = require('request');
 const config = require('../../config/config');
-const darkSkyKey = process.env.DARK_SKY_KEY || config.darkSkyKey;
+
+let darkSkyKey = config.darkSkyKey;
+if (!darkSkyKey) {
+    darkSkyKey = process.env.DARK_SKY_KEY;
+}
 
 /**
  * Takes in the latitude and longitude as arguments and returns the forecast for that address

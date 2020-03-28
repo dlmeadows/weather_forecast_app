@@ -1,7 +1,9 @@
 const request = require('request');
 const config = require('../../config/config');
-const geoCodeToken = process.env.GEO_CODE_TOKEN || config.geocodeToken;
-
+let geocodeToken = config.geocodeToken;
+if (!geocodeToken) {
+    geocodeToken = process.env.GEO_CODE_TOKEN;
+}
 /**
  * Takes in an address as an argument, and returns the latitude and longitude
  * @param address
