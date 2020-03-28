@@ -1,4 +1,6 @@
 const request = require('request');
+const config = require('../../config/config');
+const geoCodeToken = process.env.GEO_CODE_TOKEN || config.geocodeToken;
 
 /**
  * Takes in an address as an argument, and returns the latitude and longitude
@@ -6,7 +8,7 @@ const request = require('request');
  * @param callback
  */
 const geocode = (address, callback) => {
-    const url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(address) + ".json?access_token=pk.eyJ1IjoiZG1lYWRvd3M4NSIsImEiOiJjazg1MG1tczMwMXpkM2lwMWU3bGd4dm5lIn0.I_ekFwxBOwjThJMZTM5dDQ&limit=1";
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${geocodeToken}`;
 
     request({url, json: true}, (error, {body}) => {
         if (error) {
