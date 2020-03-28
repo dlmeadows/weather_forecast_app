@@ -1,5 +1,5 @@
 {
-  "name": "web-server",
+  "name": "weather_forecast_appr",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
